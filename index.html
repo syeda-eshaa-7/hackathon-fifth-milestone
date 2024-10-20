@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Resume Builder</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
 </head>
 <body>
 
@@ -19,10 +17,6 @@
                 <!-- Personal Information -->
                 <fieldset>
                     <legend>Personal Information</legend>
-<label for="username">Resume URL</label>
-<input type="text" id="username" name="username" required> <br>
-
-
                     <label for="firstName">First Name:</label>
                     <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
                     <label for="lastName">Last Name:</label>
@@ -61,12 +55,7 @@
             <h2>Your Resume</h2>
             <div id="resume-content"></div>
         </section>
-        <button type="button" id="sharebtn">Share </button>
-      
-
-
     </div>
-  
 
     <script src="index.js"></script>
 </body>
