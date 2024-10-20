@@ -6,24 +6,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const educationSection = document.getElementById('education-section');
     const experienceSection = document.getElementById('experience-section');
     const skillsSection = document.getElementById('skills-section');
-    const usernameElement = document.getElementById('username');
     // Event listeners for adding more education, experience, and skills
     (_a = document.getElementById('add-education')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', addEducationField);
     (_b = document.getElementById('add-experience')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', addExperienceField);
     (_c = document.getElementById('add-skill')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', addSkillField);
-    const shearbtn = document.querySelector("#sharebtn");
-    shearbtn === null || shearbtn === void 0 ? void 0 : shearbtn.addEventListener("click", (e) => {
-        if (navigator.share) {
-            navigator.share({
-                title: "resume builder app",
-                url: "www.resumabuilder.com"
-            }).then(() => {
-                console.log("thanks for sharing");
-            }).catch((err) => {
-                console.log(err);
-            });
-        }
-    });
+    
+    const sharebtn = document.querySelector("#sharebtn");
+sharebtn === null || sharebtn === void 0 ? void 0 : sharebtn.addEventListener("click", (e) => {
+    if (navigator.share) {
+        navigator.share({
+            title: "resume builder app",
+            url: "www.resumabuilder.com"
+        }).then(() => {
+            console.log("thanks for sharing");
+        }).catch((err) => {
+            console.log(err);
+        });
+    }
+});
     // Add dynamic fields for Education
     function addEducationField() {
         const div = document.createElement('div');
@@ -61,13 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const lastName = document.getElementById('lastName').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
-        const username = (usernameElement === null || usernameElement === void 0 ? void 0 : usernameElement.value) || ''; // Ensure we get the username value
-        const uniquePath = `resume/${username.replace(/\s+/g, '_')}_resume.html`; // Create unique resume URL
         // Create resume content
         resumeContent.innerHTML = `
             <h3 contenteditable="true">${firstName} ${lastName}</h3>
             <p contenteditable="true"><strong>Email:</strong> ${email}</p>
-            <p contenteditable="true"><strong>Username:</strong> ${username}</p>
             <p contenteditable="true"><strong>Phone:</strong> ${phone}</p>
             <h3>Education</h3>
             <ul id="education-list"></ul>
@@ -105,13 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
             li.innerHTML = `<span contenteditable="true">${skill}</span>`;
             skillsList.appendChild(li);
         });
-        // Create the download link
-        const resumeHTML = resumeContent.innerHTML;
-        const downloadLink = document.createElement('a');
-        downloadLink.href = "data:text/html;charset=utf-8," + encodeURIComponent(resumeHTML);
-        downloadLink.download = uniquePath;
-        downloadLink.textContent = "Download your Resume";
-        document.body.appendChild(downloadLink); // Append the download link to the document body
         // Make the resume editable
         const editableFields = resumeContent.querySelectorAll('[contenteditable="true"]');
         editableFields.forEach((field) => {
