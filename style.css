@@ -25,7 +25,7 @@ body {
 }
 
 h1, h2, h4 {
-    color: #004d40; /* Teal color for headings */
+    color: #004d40;
     font-weight: 600;
 }
 
@@ -35,7 +35,7 @@ form {
 }
 
 fieldset {
-    border: 1px solid #b2dfdb; /* Light teal border */
+    border: 1px solid #b2dfdb;
     border-radius: 8px;
     margin-bottom: 15px;
     padding: 20px;
@@ -44,22 +44,22 @@ fieldset {
 }
 
 fieldset:hover {
-    background: #f1f8f7; /* Slightly grayish background on hover */
-    border-color: #009688; /* Darker teal on hover */
+    background: #f1f8f7; 
+    border-color: #009688; 
 }
 
 legend {
     font-size: 1.4em;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #004d40; /* Teal color for legend */
+    color: #004d40; 
 }
 
 label {
     margin-bottom: 5px;
     display: block;
     font-weight: 500;
-    color: #00796b; /* Medium teal */
+    color: #00796b; 
 }
 
 input[type="text"], input[type="email"], input[type="date"] {
@@ -73,12 +73,12 @@ input[type="text"], input[type="email"], input[type="date"] {
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus {
     border-color: #004d40; /* Teal border on focus */
-    box-shadow: 0 0 5px rgba(0, 77, 64, 0.3); /* Teal shadow on focus */
+    box-shadow: 0 0 5px rgba(0, 77, 64, 0.3); 
     outline: none;
 }
 
 button {
-    background-color: #004d40; /* Teal background */
+    background-color: #004d40;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -89,7 +89,7 @@ button {
 }
 
 button:hover {
-    background-color: #003d33; /* Darker teal on hover */
+    background-color: #003d33; 
     transform: translateY(-2px);
 }
 
@@ -99,7 +99,7 @@ button:active {
 
 #resume-content {
     padding: 20px;
-    border: 1px solid #b2dfdb; /* Light teal border */
+    border: 1px solid #b2dfdb;
     border-radius: 8px;
     background: #ffffff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -107,7 +107,7 @@ button:active {
 }
 
 #resume-content h3 {
-    border-bottom: 2px solid #004d40; /* Teal underline */
+    border-bottom: 2px solid #004d40; 
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -129,7 +129,7 @@ button:active {
 #skills-list li {
     padding: 8px 12px;
     margin: 5px 0;
-    background: #004d40; /* Teal background */
+    background: #004d40; 
     color: white;
     border-radius: 5px;
     font-size: 0.9em;
@@ -137,7 +137,7 @@ button:active {
 }
 
 #skills-list li:hover {
-    background: #003d33; /* Darker teal on hover */
+    background: #003d33; 
     transform: translateY(-2px);
 }
 
@@ -148,12 +148,12 @@ button:active {
 #profileImage {
     display: block;
     margin: 20px auto;
-    border: 3px solid #00796b; /* Teal border */
+    border: 3px solid #00796b; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 50%; /* Circular shape */
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Ensures the image fits within the circle */
+    object-fit: cover; 
 }
 
 #image-preview img {
@@ -167,7 +167,7 @@ button:active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #sharebtn{
-    background-color: #004d40; /* Teal background */
+    background-color: #004d40;
     color: white;
     border: none;
     padding: 12px 20px;
