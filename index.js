@@ -34,7 +34,7 @@ sharebtn === null || sharebtn === void 0 ? void 0 : sharebtn.addEventListener("c
         `;
         educationSection.appendChild(div);
     }
-    // Add dynamic fields for Experience
+    //  dynamic fields for Experience
     function addExperienceField() {
         const div = document.createElement('div');
         div.innerHTML = `
@@ -44,7 +44,7 @@ sharebtn === null || sharebtn === void 0 ? void 0 : sharebtn.addEventListener("c
         `;
         experienceSection.appendChild(div);
     }
-    // Add dynamic fields for Skills
+    //  dynamic fields for Skills
     function addSkillField() {
         const div = document.createElement('div');
         div.innerHTML = `<input type="text" name="skill" placeholder="Skill" required>`;
@@ -55,7 +55,7 @@ sharebtn === null || sharebtn === void 0 ? void 0 : sharebtn.addEventListener("c
         e.preventDefault();
         generateResume();
     });
-    // Generate the resume content dynamically
+    //  resume content 
     function generateResume() {
         const firstName = document.getElementById('firstName').value;
         const lastName = document.getElementById('lastName').value;
@@ -73,7 +73,7 @@ sharebtn === null || sharebtn === void 0 ? void 0 : sharebtn.addEventListener("c
             <h3>Skills</h3>
             <ul id="skills-list"></ul>
         `;
-        // Get dynamic fields for education, experience, and skills
+        // fields for education, experience, and skills
         const educationList = document.getElementById('education-list');
         const experienceList = document.getElementById('experience-list');
         const skillsList = document.getElementById('skills-list');
@@ -106,7 +106,7 @@ sharebtn === null || sharebtn === void 0 ? void 0 : sharebtn.addEventListener("c
         const editableFields = resumeContent.querySelectorAll('[contenteditable="true"]');
         editableFields.forEach((field) => {
             field.addEventListener('blur', function () {
-                // Optionally update the field's content here (e.g., save to localStorage or database)
+                // Optionally update the fields
                 console.log(`${this.innerText} updated!`);
             });
         });
